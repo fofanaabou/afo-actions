@@ -6,11 +6,16 @@ jobs:
     steps:
       - name: Checkout repo to use the action locally
         uses: actions/checkout@v4
+
       - name: Run my own container action
         id: my-action
         uses: ./
         with:
           who-to-greet: '@grandfof'
+
+      - name: Output the answer
+        run: echo "The answer is ${{ steps.my-action.outputs.answer }}"
+
       - name: Test the container
         if: ${{ steps.my-action.outputs.answer != 42 }}
         run: |
