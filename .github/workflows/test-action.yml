@@ -9,7 +9,7 @@ jobs:
 
       - name: Run my own container action
         id: my-action
-        uses: ./
+        uses: fofanaabou/afo-actions@v1.0.0
         with:
           who-to-greet: '@grandfof'
 
