@@ -1,5 +1,8 @@
 name: "fofanaabou's Action in Action"
 description: 'Greets someone and returns always 42.'
+branding:
+  icon: 'sunrise'
+  color: yellow
 inputs:
   who-to-greet:
     description: 'Who to greet'
